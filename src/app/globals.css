@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lemon_chiffon: theme(colors.lemon_chiffon);
+  --cafe_noir: theme(colors.cafe_noir);
+  --jasmine: theme(colors.jasmine);
+  --caramel: theme(colors.caramel);
+  --tigers_eye: theme(colors.tigers_eye);
+  --scroll_bar_hover: #634B2C;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Friend', sans-serif;
+  background: var(--lemon_chiffon);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@font-face {
+  font-family: 'Milksty';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Milksty'), url('https://fonts.cdnfonts.com/s/105701/Milksty.OTF.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Friend';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Friend'), url('https://fonts.cdnfonts.com/s/104814/Friend-BF651631e7200ce.woff') format('woff');
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--cafe_noir);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll_bar_hover);
+}
