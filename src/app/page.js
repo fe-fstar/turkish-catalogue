@@ -11,6 +11,7 @@ import introPaper from "../lotties/introduction-paper.json";
 import email from "../lotties/email.json";
 import windowDimensions from "../utils/windowDimensions";
 
+// Style for layered waves spacer
 const styles = {
   spacer: {
     aspectRatio: 900 / 150,
@@ -48,6 +49,7 @@ export default function Home() {
     return -(dimensions.width);
   }
 
+  // Horizontal scroll for the second section
   useGSAP(() => {
     gsap.to(horizontalScroll.current, {
       x: getScrollAmount,
@@ -67,6 +69,7 @@ export default function Home() {
     });
   }, { dependencies: [dimensions.width], revertOnUpdate: true });
 
+  // Fade-in effect for the first part of the horizontal scroll section
   useGSAP(() => {
     gsap.from(".animated-horizontal-start", {
       opacity: 0,
@@ -82,6 +85,7 @@ export default function Home() {
     });
   }, { scope: horizontalScrollPageStart.current });
 
+  // Fade-in effect for the last section
   useGSAP(() => {
     gsap.from(".animated-final", {
       opacity: 0,
@@ -100,6 +104,7 @@ export default function Home() {
   return (
     <main>
       {/* {loading && <Loading />} */}
+      {/* Introduction section start */}
       <section className="h-screen bg-cafe_noir *:text-white flex flex-col items-center justify-center">
         <h1 className="text-6xl">
           All the <span className="text-caramel">Turkish</span> grammar put to <span className="text-caramel">one place</span>.
@@ -109,6 +114,8 @@ export default function Home() {
           You can explore or study the Turkish language through our comprehensively and meticulously designed topics.
         </p>
       </section>
+      {/* Introduction section end */}
+      {/* Horizontal scroll start */}
       <section ref={horizontalScroll} className="h-screen relative flex w-[200vw]">
         <div style={{ ...styles.spacer, ...styles.layeredWaves }} />
         <div className="w-screen px-8 flex flex-col md:flex-row justify-evenly items-center" ref={horizontalScrollPageStart}>
@@ -124,10 +131,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Horizontal scroll end */}
+      {/* Final section start */}
       <section className="h-screen flex flex-col md:flex-row md:justify-evenly items-center px-8" ref={finalPage}>
         <div className="basis-1/2 flex flex-col justify-center items-start animated-final"><h1 className="text-6xl">Your feedback matters</h1><br /><p className="text-xl">We care about Turkish catalogue to be configured the ways that are most favourable for learners. Therefore, you can submit your suggestions and reports at anytime; we would love to review them to improve our website.</p></div>
         <div className="animated-final"><Lottie className="w-[320px]" animationData={email} loop={true} /></div>
       </section>
+      {/* Final section end */}
     </main>
   );
 }

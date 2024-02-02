@@ -15,7 +15,7 @@ export default function TopicsMenu() {
                 </svg>
                 <span className="text-lg">Topics</span>
             </div>
-            <nav className={"fixed md:p-4 transition-all duration-300 left-0 z-10 w-screen h-dvh bg-cafe_noir overflow-hidden *:text-white " + (isOpen ? "bottom-0" : "bottom-full")}>
+            <nav className={"fixed md:p-4 transition-all duration-300 ease-out left-0 z-10 w-screen h-dvh bg-cafe_noir overflow-hidden *:text-white " + (isOpen ? "bottom-0" : "bottom-full")}>
                 <h1 className="text-center text-6xl block max-md:hidden">Topics</h1>
             </nav>
         </>
