@@ -31,6 +31,18 @@ body {
   box-sizing: border-box;
 }
 
+.tooltip {
+  @apply invisible absolute rounded shadow-md p-1 bg-gray-100 underline-offset-4 -mt-8 whitespace-pre-wrap;
+}
+
+.has-tooltip {
+  @apply cursor-pointer;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
 @media (prefers-reduced-motion) {
   *,
   *::before,
@@ -52,6 +64,12 @@ body {
   font-style: normal;
   font-weight: 400;
   src: local('Friend'), url('https://fonts.cdnfonts.com/s/104814/Friend-BF651631e7200ce.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DynaPuff';
+  font-style: normal;
+  src: local('DynaPuff'), url('https://fonts.cdnfonts.com/s/107371/DynaPuff[wdth,wght].woff') format('woff');
 }
 
 /* width */

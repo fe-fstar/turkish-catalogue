@@ -1,11 +1,12 @@
 import ColorCodedSentence from "@/components/color-coded-sentence"
 
 const turkishSections = [
-    { text: 'Marketten', color: 'yellow', separated: true },
-    { text: 'iki', color: 'aqua', separated: true },
-    { text: 'ekmek', color: 'blue', separated: true },
-    { text: 'aldım', color: 'red', separated: false },
-    { text: '.', color: false, separated: false },
+    { text: 'Market', color: 'yellow', separated: false, tooltip: "market (market) + -den = marketten (from the market)" },
+    { text: 'ten', color: 'tomato', separated: true, tooltip: false },
+    { text: 'iki', color: 'aqua', separated: true, tooltip: "two" },
+    { text: 'ekmek', color: 'blue', separated: true, tooltip: "bread*\n*bread is countable in Turkish. It typically refers to a loaf of bread." },
+    { text: 'aldım', color: 'red', separated: false, tooltip: "al (buy) + -dım = aldım (I bought)" },
+    { text: '.', color: false, separated: false, tooltip: false },
 ];
 
 const englishSections = [
@@ -22,10 +23,10 @@ const englishSections = [
 ];
 
 const turkishSections2 = [
-    { text: 'Araba', color: 'blue', separated: false },
-    { text: 'dan', color: 'yellow', separated: true },
-    { text: 'uzaklaşıyorum', color: 'red', separated: false },
-    { text: '.', color: false, separated: false },
+    { text: 'Araba', color: 'blue', separated: false, tooltip: "araba (car) + -dan = arabadan (from the car)" },
+    { text: 'dan', color: 'yellow', separated: true, tooltip: false },
+    { text: 'uzaklaşıyorum', color: 'red', separated: false, tooltip: "uzak (far, away) + -laş = uzaklaş (go / move away)\nuzaklaş (go away) + -yorum = uzaklaşıyorum (I'm moving away)" },
+    { text: '.', color: false, separated: false, tooltip: false },
 ];
 
 const englishSections2 = [

@@ -17,6 +17,7 @@ module.exports = {
       fontFamily: {
         milksty: ["Milksty", "sans-serif"],
         friend: ["Friend", "sans-serif"],
+        dynaPuff: ["DynaPuff", "sans-serif"]
       },
     }
   },
