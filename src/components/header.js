@@ -2,7 +2,7 @@ import TopicsMenu from "./topics-menu";
 
 export default function Header() {
     return (
-        <header className="w-screen p-4 flex items-center justify-evenly bg-cafe_noir *:text-white *:basis-1/3 *:flex *:items-center shadow-lg border-b-2 border-lemon_chiffon">
+        <header className="absolute w-screen p-4 flex items-center justify-evenly bg-cafe_noir *:text-white *:basis-1/3 *:flex *:items-center shadow-lg border-b-2 border-lemon_chiffon">
             <div className="justify-center md:justify-start">
                 <TopicsMenu />
             </div>

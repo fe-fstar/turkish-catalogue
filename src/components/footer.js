@@ -6,7 +6,7 @@ export default function Footer() {
                     <path d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z" className="fill-[#FCF6CE]"></path>
                 </svg>
             </div>
-            <div className="flex justify-evenly items-center p-4">
+            <div className="flex justify-evenly items-center p-4 gap-x-4">
                 <h1 className="text-xl">Turkish Catalogue, 2024</h1>
                 <a className="text-xl hover:opacity-75" href="https://kolta.dev" target="_blank">Visit the Developer</a>
             </div>

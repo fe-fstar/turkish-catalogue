@@ -8,7 +8,7 @@
   --jasmine: theme(colors.jasmine);
   --caramel: theme(colors.caramel);
   --tigers_eye: theme(colors.tigers_eye);
-  --scroll_bar_hover: #634B2C;
+  --scroll_bar_hover: #634b2c;
 }
 
 html,
@@ -19,7 +19,7 @@ body {
 body {
   width: 100%;
   min-height: 100vh;
-  font-family: 'Friend', sans-serif;
+  font-family: "Friend", sans-serif;
   background: var(--lemon_chiffon);
 }
 
@@ -31,12 +31,55 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  position: relative;
+  display: inline-block;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+  transform-origin: bottom right;
+  transform: scaleX(0);
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+#home p {
+  font-size: clamp(16px, 3vw, 20px);
+}
+
+h1, section p {
+  text-wrap: balance;
+}
+
+footer > * {
+  text-align: center;
+}
+
+.lottie {
+  width: clamp(120px, 67vw, 320px);
+}
+
 .tooltip {
   @apply invisible absolute rounded shadow-md p-1 bg-gray-100 underline-offset-4 -mt-8 whitespace-pre-wrap;
 }
 
 .has-tooltip {
-  @apply cursor-pointer;
+  @apply cursor-help;
 }
 
 .has-tooltip:hover .tooltip {
@@ -53,23 +96,28 @@ body {
 }
 
 @font-face {
-  font-family: 'Milksty';
+  font-family: "Milksty";
   font-style: normal;
   font-weight: 400;
-  src: local('Milksty'), url('https://fonts.cdnfonts.com/s/105701/Milksty.OTF.woff') format('woff');
+  src: local("Milksty"),
+    url("https://fonts.cdnfonts.com/s/105701/Milksty.OTF.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Friend';
+  font-family: "Friend";
   font-style: normal;
   font-weight: 400;
-  src: local('Friend'), url('https://fonts.cdnfonts.com/s/104814/Friend-BF651631e7200ce.woff') format('woff');
+  src: local("Friend"),
+    url("https://fonts.cdnfonts.com/s/104814/Friend-BF651631e7200ce.woff")
+      format("woff");
 }
 
 @font-face {
-  font-family: 'DynaPuff';
+  font-family: "DynaPuff";
   font-style: normal;
-  src: local('DynaPuff'), url('https://fonts.cdnfonts.com/s/107371/DynaPuff[wdth,wght].woff') format('woff');
+  src: local("DynaPuff"),
+    url("https://fonts.cdnfonts.com/s/107371/DynaPuff[wdth,wght].woff")
+      format("woff");
 }
 
 /* width */
